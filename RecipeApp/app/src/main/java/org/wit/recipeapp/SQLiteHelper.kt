@@ -74,4 +74,26 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context,DatabaseName,nul
         }
         return rcpList
     }
+
+    fun updateRecipe(rcp: RecipeModel): Int{
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(ID, rcp.id)
+        contentValues.put(Name, rcp.rName)
+        contentValues.put(Details, rcp.rDetails)
+
+        val successful = db.update(TBL_Recipe, contentValues, "id=" + rcp.id, null)
+        db.close()
+        return successful
+    }
+
+    fun deleteRecipeById(id:Int): Int{
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(ID, id)
+
+        val successful = db.delete(TBL_Recipe, "id=$id", null)
+        db.close()
+        return successful
+    }
 }
