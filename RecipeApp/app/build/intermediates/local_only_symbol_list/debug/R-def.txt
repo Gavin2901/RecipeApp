@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id addbtn
+id deleteBtn
+id editDetails
+id editName
+id rcpDetails
+id rcpId
+id rcpName
+id recyclerView
+id viewbtn
+layout activity_main
+layout card_items_rcp
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.RecipeApp
