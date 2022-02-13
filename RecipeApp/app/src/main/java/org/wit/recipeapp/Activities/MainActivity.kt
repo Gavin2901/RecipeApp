@@ -15,12 +15,15 @@ import org.wit.recipeapp.RecipeModel
 import org.wit.recipeapp.SQLiteHelper
 
 //TODO MAIN:    have only list recipes on main page and go to a different page for the others(add, delete, update)
+//TODO:         have it so when you click an recipe it will bring you into a tab showing off the entire recipe in full
+//TODO:         fragments destroy my app entirely, find out why this happens
 class MainActivity : AppCompatActivity() {
     private lateinit var editName : EditText
     private lateinit var editDetails : EditText
     private lateinit var addBtn: Button
     private lateinit var viewBtn: Button
     private lateinit var updateBtn: Button
+
 
     private lateinit var sqLiteHelper: SQLiteHelper
     private lateinit var recyclerView: RecyclerView
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
     private fun addRecipe(){
         val rName = editName.text.toString()
         val rDetails = editDetails.text.toString()
+
 
         if(rName.isEmpty() || rDetails.isEmpty()){
             Toast.makeText(this,"Cannot add: Missing content", Toast.LENGTH_SHORT).show()

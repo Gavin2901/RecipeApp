@@ -7,34 +7,63 @@
     tools:context=".Activities.MainActivity"
     android:background="@color/background_navy"
     >
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/toolbar_color"
+            android:text="My Recipes"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+
+
+        <!-- toolbar works but doesn't allow any text/icons to be added on it as a layer
+    probably something im overlooking so ill just use a textview to simulate the tool bar
+
+       <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/toolbar_color"></androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
+
+            >
+
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/toolbar_color"></androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>-->
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/editName"
-        android:layout_width="match_parent"
+        android:layout_width="382dp"
         android:layout_height="36dp"
         android:layout_margin="16dp"
         android:background="@color/white"
+        android:fontFamily="open"
         android:hint="Recipe Name"
-        android:fontFamily="open"/>
+        android:textAlignment="center"/>
+
 
     <EditText
         android:id="@+id/editDetails"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_width="382dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"
-        android:hint="Recipe" />
+        android:hint="Recipe"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
