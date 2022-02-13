@@ -9,7 +9,7 @@ import java.lang.Exception
 class SQLiteHelper(context: Context) : SQLiteOpenHelper(context,DatabaseName,null, DatabaseVersion) {
 
    companion object{
-       private const val DatabaseVersion=4
+       private const val DatabaseVersion=5
        private const val DatabaseName= "recipe.db"
        private const val TBL_Recipe = "tbl_recipe"
        private const val ID = "id"

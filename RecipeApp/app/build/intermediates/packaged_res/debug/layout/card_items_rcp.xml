@@ -3,35 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/cardview_shadow_end_color"
     android:padding="16dp"
-    android:weightSum="1">
+    android:weightSum="1"
+    >
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_weight="1"
+        android:background="@color/white"
         android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/rcpId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Id"/>
 
-            <TextView
-                android:id="@+id/rcpName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Name"/>
+        <TextView
+            android:id="@+id/rcpName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/rcpDetails"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="Details"/>
+        <TextView
+            android:id="@+id/rcpDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <Button
@@ -40,5 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text="Delete"
-        android:textAllCaps="false"/>
+
+        android:backgroundTint="@color/button_color"
+        android:textAllCaps="false"
+    />
 </LinearLayout>

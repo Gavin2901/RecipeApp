@@ -14,6 +14,7 @@ import org.wit.recipeapp.RecipeAdapter
 import org.wit.recipeapp.RecipeModel
 import org.wit.recipeapp.SQLiteHelper
 
+//TODO MAIN:    have only list recipes on main page and go to a different page for the others(add, delete, update)
 class MainActivity : AppCompatActivity() {
     private lateinit var editName : EditText
     private lateinit var editDetails : EditText
@@ -34,12 +35,12 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
         sqLiteHelper = SQLiteHelper(this)
 
-
+        //TODO make buttons more dynamic
         addBtn.setOnClickListener{addRecipe()}
         viewBtn.setOnClickListener{getRecipe()}
         updateBtn.setOnClickListener{updateRecipe()}
 
-        //this brings up a popup of recipe name when recipe is clicked
+        //this brings up a popup of recipe name when recipe is clicked/tapped
         adapter?.setOnClickItem {
             Toast.makeText(this,it.rName,Toast.LENGTH_SHORT).show()
 
@@ -58,9 +59,9 @@ class MainActivity : AppCompatActivity() {
         val rDetails = editDetails.text.toString()
 
         if(rName.isEmpty() || rDetails.isEmpty()){
-            Toast.makeText(this,"Please Enter Content Here", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Cannot add: Missing content", Toast.LENGTH_SHORT).show()
         }else{
-            val rcp = RecipeModel(rName = rName, rDetails = rDetails)
+            val rcp = RecipeModel( rName = rName, rDetails = rDetails)
             val status = sqLiteHelper.insertRecipe(rcp)
             //checks if insert is successful or not
             if(status > -1) {
@@ -72,6 +73,9 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+    //i couldn't get my data to appear on launch of app so i just used a view button which works
+    // TODO HAVE DATA LIST ON LAUNCH NOT VIA VIEW BUTTON
     private fun getRecipe(){
         val rcpList = sqLiteHelper.getAllRecipes()
         Log.e("Get Recipe", "${rcpList.size}")
@@ -81,11 +85,12 @@ class MainActivity : AppCompatActivity() {
     private fun updateRecipe() {
         val rName = editName.text.toString()
         val rDetails = editDetails.text.toString()
-
+        //if no changes are made and you click update this pops up
         if (rName == rcp?.rName && rDetails == rcp?.rDetails) {
             Toast.makeText(this, "Recipe not changed", Toast.LENGTH_SHORT).show()
             return
         }
+        //checks if update is successful or not
         if (rcp == null) return
             val rcp = RecipeModel(id = rcp!!.id, rName = rName, rDetails = rDetails)
             val status = sqLiteHelper.updateRecipe(rcp)
@@ -98,6 +103,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun deleteRecipe(id:Int){
+        //deletes by id
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Are you sure you want to delete this recipe?")
         builder.setCancelable(true)

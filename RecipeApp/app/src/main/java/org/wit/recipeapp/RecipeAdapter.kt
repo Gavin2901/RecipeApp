@@ -45,13 +45,13 @@ class RecipeAdapter :RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>(){
 
 
     class RecipeViewHolder (var view: View): RecyclerView.ViewHolder(view){
-        private var id = view.findViewById<TextView>(R.id.rcpId)
+
         private var rName = view.findViewById<TextView>(R.id.rcpName)
         private var rDetails = view.findViewById<TextView>(R.id.rcpDetails)
         var deleteBtn = view.findViewById<Button>(R.id.deleteBtn)
 
         fun bindView(rcp:RecipeModel){
-            id.text = rcp.id.toString()
+
             rName.text = rcp.rName
             rDetails.text = rcp.rDetails
         }

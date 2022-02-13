@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.MainActivity">
+    tools:context=".Activities.MainActivity"
+    android:background="@color/background_navy"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:text="Recipe App"
-        />
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar_color"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <EditText
         android:id="@+id/editName"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Recipe Name"/>
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:hint="Recipe Name"
+        android:fontFamily="open"/>
 
     <EditText
         android:id="@+id/editDetails"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Recipe"/>
+        android:background="@color/white"
+        android:hint="Recipe" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +45,9 @@
             android:text="Add Recipe"
             android:textAllCaps="false"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Button>
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            ></Button>
 
         <Button
             android:id="@+id/viewbtn"
@@ -50,7 +55,9 @@
             android:textAllCaps="false"
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Button>
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color">
+        </Button>
 
         <Button
             android:id="@+id/updatebtn"
@@ -58,12 +65,15 @@
             android:textAllCaps="false"
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></Button>
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color">
+        </Button>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="@color/background_navy"/>
 
 </LinearLayout>

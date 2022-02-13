@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\build\\intermediates\\merged_res\\debug\\layout_card_items_rcp.xml.flat",
         "source": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\src\\main\\res\\layout\\card_items_rcp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Gavin\\Desktop\\RecipeApp\\RecipeApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
